@@ -1,11 +1,10 @@
 Dado("que eu acesso o sistema") do
-  visit '/login'
+  @login_page = LogiPage.new
+  @login_page.acessa
 end
   
 Quando("faço login com {string} e {string}") do |email, senha|
-  find('#login_email').set email
-  find('input[name=password]').set senha
-  find('button[id*=btnLogin]').click 
+  @login_page.logar(email, senha)
 end
   
 Então("vejo a mensagem de boas vindas {string}") do |mensagem|

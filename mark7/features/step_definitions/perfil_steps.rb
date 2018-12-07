@@ -1,8 +1,7 @@
 Dado("que estou autenticado com {string} e {string}") do |email, senha|
-  visit '/login'
-  find('#login_email').set email
-  find('input[name=password]').set senha
-  find('button[id*=btnLogin]').click 
+  @login_page = LogiPage.new
+  @login_page.acessa
+  @login_page.logar(email, senha)
 end
 # clica no link através do nome do link
 Dado("acesso o meu perfil") do
