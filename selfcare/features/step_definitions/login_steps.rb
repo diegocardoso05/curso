@@ -1,14 +1,11 @@
 Dado("que eu acesso o sistema") do
-    visit  'http://localhost:7001/SelfCareManagerWEB/login.jsf'
+    @login_page.acessa
   end
   
   Quando("faço login com {string} e {string}") do |usuario, senha|
-    find('input[type=text]').set usuario
-    find('input[type=password]').set senha
-    find('input[type=submit]').click
+    @login_page.logar(usuario, senha)
   end
   
   Então("Então vejo a mensagem de boas vindas {string}") do |mensagem|
-    alerta = find('label[id*=labelLogin]')
-    expect(alerta).to have_content mensagem
+    expect(@toolbar.painel).to have_content mensagem
   end
