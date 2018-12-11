@@ -3,9 +3,21 @@
 # termina com => $
 # começa com => ^
 
-After('@logout') do
-  find('.navbar a[href*=dropdown]').click
-  find('.navbar a[href$=logout]').click
+Before do
+  @nav = Navbar.new
+  @side = Sidebar.new
+  @login_page = LoginPage.new
+  @tarefas_page = TarefasPage.new
+  @perfil_page = PerfilPage.new
 end
 
-Capybara.default_max_wait_time = 5
+Before('@login') do
+  @login_page.acessa
+  @login_page.logar('diegocardoso05@gmail.com', '123456')
+end
+
+After('@logout') do
+  @nav.sair
+end
+
+#Capybara.default_max_wait_time = 5
