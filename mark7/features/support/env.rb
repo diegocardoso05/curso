@@ -7,5 +7,5 @@ Capybara.configure do |config|
   ENV['no_proxy'] = "127.0.0.1"
 end  
 
-Capybara.default_max_wait_time = 5
+Capybara.default_max_wait_time = 2
 

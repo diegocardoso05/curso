@@ -13,6 +13,7 @@ class TarefasPage
       fill_in 'title', with:nome
       fill_in 'dueDate', with:data_f
       click_button 'Cadastrar'
+
     end
   end
 end

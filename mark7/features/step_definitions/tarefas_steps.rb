@@ -15,5 +15,6 @@ Quando("faço o cadastro desta tarefa")do
 end
   
 Então("devo ver esta tarefa com o status {string}")do | status_tarefa | 
-    
+    tr = find('#tasks tbody tr', text: @nome_tarefa)
+    expect(tr).to have_content status_tarefa 
 end
