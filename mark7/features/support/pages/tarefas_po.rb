@@ -5,6 +5,15 @@ class TarefasPage
     find('#task-board')
   end
 
+  def buscar_tr
+    find('#tasks tbody tr', text: nome)
+  end
+
+  # alertea e uma objeto que retorna um objeto do tipo string
+  def alerta
+    find('.alert-warn').text
+  end
+
   def cadastrar(nome, data_f)
     find('#insert-button').click
     

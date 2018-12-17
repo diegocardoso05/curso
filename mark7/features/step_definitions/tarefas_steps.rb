@@ -15,6 +15,10 @@ Quando("faço o cadastro desta tarefa")do
 end
   
 Então("devo ver esta tarefa com o status {string}")do | status_tarefa | 
-    tr = find('#tasks tbody tr', text: @nome_tarefa)
+    tr = @tarefas_page.buscar_tr(@nome_tarefa)
     expect(tr).to have_content status_tarefa 
+end
+
+Então("devo ver a seguinte mensagem:{string}") do |mensagem_alerta|
+    expect(@tarefas_page.alerta).to eql mensagem_alerta
 end

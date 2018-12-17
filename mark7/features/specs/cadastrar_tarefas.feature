@@ -15,20 +15,23 @@ Funcionalidade: Cadastro de tarefas
             |Compras     |
             |SuperMercado|
             |Ketchup     |
+            |Mostarda    |
+            |Maionese    |
         Quando faço o cadastro desta tarefa
         Então devo ver esta tarefa com o status "Em andamento"
 
+    @tentativa @login @logout
     Esquema do Cenario: Tentar cadastrar
         
         Dado que o nome da minha tarefa é "<nome>"
         E a data de finalização será "<data>"
-        Quando faço o cadastrado desta tarefa
-        Então devo ver a seguinte mensagem mensagem:"<mensagem>"
+        Quando faço o cadastro desta tarefa
+        Então devo ver a seguinte mensagem:"<mensagem>"
 
         Exemplos:
-            |nome|data|mensagem|
-            |Ler|21/12/2018|10 caracteres é o mínimo permitido.|
-            ||21/12/2018|Nome é obrigado.|
+            | nome | data       | mensagem                            |
+            | Ler  | 21/12/2018 | 10 caracteres é o mínimo permitido. |
+            |      | 21/12/2018 | Nome é obrigatório.                 |
 
     Cenario: Tarefa não pode ser duplicada
 
@@ -36,5 +39,5 @@ Funcionalidade: Cadastro de tarefas
         E a data de finalização será "22/12/2018"
         Mas eu já cadastrei esta tarefa e esqueci
         Quando faço o cadastro desta tarefa
-        Então devo ver a seguinte mensagem: "Tarefa duplicada"
+        Então devo ver a seguinte mensagem:"Tarefa duplicada"
           

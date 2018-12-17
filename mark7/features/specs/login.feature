@@ -15,7 +15,7 @@ Funcionalidade: Login
       Quando faço login com "eu@papito.io" e "123456"
       Então vejo a mensagem de boas vindas "Olá, Fernando"
 
-    @tentativa
+    @tentativa_login
     Esquema do Cenario: Tentativa de login
       
       Quando faço login com "<email>" e "<senha>"
