@@ -5,7 +5,7 @@ class TarefasPage
     find('#task-board')
   end
 
-  def buscar_tr
+  def buscar_tr(nome)
     find('#tasks tbody tr', text: nome)
   end
 

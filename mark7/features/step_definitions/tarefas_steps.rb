@@ -1,4 +1,4 @@
-Dado("que o nome da minha tarefa é {string}")do | nome_tarefa | 
+Dado("que o nome da minha tarefa é {string}")do | nome_tarefa |  
     @nome_tarefa = nome_tarefa
 end
   
@@ -15,8 +15,9 @@ Quando("faço o cadastro desta tarefa")do
 end
   
 Então("devo ver esta tarefa com o status {string}")do | status_tarefa | 
-    tr = @tarefas_page.buscar_tr(@nome_tarefa)
-    expect(tr).to have_content status_tarefa 
+    expect(
+        @tarefas_page.buscar_tr(@nome_tarefa)
+    ).to have_content status_tarefa 
 end
 
 Então("devo ver a seguinte mensagem:{string}") do |mensagem_alerta|
