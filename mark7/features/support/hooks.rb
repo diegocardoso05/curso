@@ -9,6 +9,8 @@ Before do
   @login_page = LoginPage.new
   @tarefas_page = TarefasPage.new
   @perfil_page = PerfilPage.new
+  #define a resolução minima que tela vai iniciar o teste
+  page.current_window.resize_to(1440, 900)
 end
 
 Before('@login') do

@@ -6,4 +6,7 @@ gem 'cucumber'
 gem 'faker'
 gem 'rspec'
 gem 'selenium-webdriver'
+gem 'bson', '4.3.0'
+gem 'mongo', '2.6.1'
+
 
