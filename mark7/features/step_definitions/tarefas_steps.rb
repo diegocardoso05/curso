@@ -1,5 +1,6 @@
 Dado("que o nome da minha tarefa é {string}")do | nome_tarefa |  
     @nome_tarefa = nome_tarefa
+    DAO.new.remover_tarefa(@nome_tarefa,'diegocardoso05@gmail.com')
 end
   
 Dado("a data de finalização será {string}")do | data_finalizacao | 
