@@ -5,7 +5,7 @@ Funcionalidade: Cadastro de tarefas
     Sendo uma usuário cadastrado
     Posso adicionar novas tarefas no meu Painel
 
-    @smoke @login
+    @smoke @login @logout
     Cenario: Nova tarefa
 
         Dado que o nome da minha tarefa é "Fazer Compras"
@@ -19,6 +19,7 @@ Funcionalidade: Cadastro de tarefas
             |Maionese    |
         Quando faço o cadastro desta tarefa
         Então devo ver esta tarefa com o status "Em andamento"
+        E devo ver somente 1 tarefa com o nome cadastrado
 
     @tentativa @login @logout
     Esquema do Cenario: Tentar cadastrar
@@ -32,12 +33,13 @@ Funcionalidade: Cadastro de tarefas
             | nome | data       | mensagem                            |
             | Ler  | 21/12/2018 | 10 caracteres é o mínimo permitido. |
             |      | 21/12/2018 | Nome é obrigatório.                 |
-
+    @login @logout @dup
     Cenario: Tarefa não pode ser duplicada
 
-        Dado que nome da minha tarefa é "Ler um livro MongoDB"
+        Dado que o nome da minha tarefa é "Ler um livro MongoDB"
         E a data de finalização será "22/12/2018"
         Mas eu já cadastrei esta tarefa e esqueci
         Quando faço o cadastro desta tarefa
-        Então devo ver a seguinte mensagem:"Tarefa duplicada"
+        Então devo ver a seguinte mensagem:"Tarefa duplicada."
+        E devo ver somente 1 tarefa com o nome cadastrado
           
