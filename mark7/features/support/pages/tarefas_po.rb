@@ -9,6 +9,9 @@ class TarefasPage
     find('#tasks tbody tr', text: nome)
   end
 
+  def busca_trs
+    all('#tasks tbody tr')
+  end
   # alertea e uma objeto que retorna um objeto do tipo string
   def alerta
     find('.alert-warn').text
@@ -16,18 +19,28 @@ class TarefasPage
 
   def cadastrar(nome, data_f)
     find('#insert-button').click
-    
-    within('#add-task')do
+
+    within('#add-task') do
       # fill_in para preecher elemento com ID e ou NAME
       fill_in 'title', with:nome
       fill_in 'dueDate', with:data_f
       click_button 'Cadastrar'
-
     end
   end
+
+  def busca(nome)
+    find('#search-input').set nome
+    find('#search-button').click
+  end
+  def solicita_remocao(nome)
+    tr = buscar_tr(nome)
+    tr.find('#delete-button').click
+  end
+  
+  def voltar
+    click_on 'Voltar'
+  end
 end
-
-
 #click_link para elemento (link)
 #click_button para elemento (botão)
 #click_on para elementos span, div, table, etc...
