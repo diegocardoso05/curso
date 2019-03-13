@@ -4,10 +4,10 @@
 # Em ruby o tipo da variável é definido no momento
 # em que a mesma recebe o valor
 
-nome ='Mecbook Pro' #String 
+nome ='Mecbook Pro' # String 
 quantidade = 10 # Integer
-preco = 5000.00 #Float
-disponivel = true #Boolean
+preco = 5000.00 # Float
+disponivel = true # Boolean 
 
 puts nome
 puts quantidade

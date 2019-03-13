@@ -1,4 +1,8 @@
 
+    # arr = Array.new
+    # arr = "Diego"
+
+    # puts arr.class
 
     @avengers = Array.new
 
