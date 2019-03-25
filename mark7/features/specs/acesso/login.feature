@@ -12,8 +12,8 @@ Funcionalidade: Login
     @sprint1 @logout
     Cenario: Usuário autenticado
       
-      Quando faço login com "eu@papito.io" e "123456"
-      Então vejo a mensagem de boas vindas "Olá, Fernando"
+      Quando faço login com "diegocardoso05@gmail.com" e "123456"
+      Então vejo a mensagem de boas vindas "Olá, Diego"
 
     @tentativa_login
     Esquema do Cenario: Tentativa de login
@@ -22,9 +22,9 @@ Funcionalidade: Login
       Então vejo a mensagem de alerta "<saida>"
 
     Exemplos:
-      | email          | senha   | saida                       |
-      | eu@papito.io   | xpto123 | Senha inválida              |
-      | eu@papito404.i | xpto123 | Email incorreto ou ausente. |
-      |                | 123456  | Email incorreto ou ausente. |
-      | eu@papito.io   |         | Senha ausente               |
+      | email                      | senha   | saida                       |
+      | diegocardoso05@gmail.com   | xpto123 | Senha inválida              |
+      | diegocardoso05@gmail.i     | xpto123 | Email incorreto ou ausente. |
+      |                            | 123456  | Email incorreto ou ausente. |
+      | diegocardoso05@gmail.com   |         | Senha ausente               |
 
