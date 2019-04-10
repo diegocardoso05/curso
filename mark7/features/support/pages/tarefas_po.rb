@@ -32,14 +32,31 @@ class TarefasPage
     find('#search-input').set nome
     find('#search-button').click
   end
+
   def solicita_remocao(nome)
     tr = buscar_tr(nome)
     tr.find('#delete-button').click
   end
-  
+
+  def confirma_modal
+    within('.modal-content') do
+      click_button 'Sim'
+    end
+  end
+
+  def deixa_queto_modal
+    within('.modal-content') do
+      click_button 'Não, deixa queto.'
+    end
+  end
+
   def voltar
     click_on 'Voltar'
   end
+
+  # def modal
+  #   find('.modal-content')
+  # end
 end
 #click_link para elemento (link)
 #click_button para elemento (botão)

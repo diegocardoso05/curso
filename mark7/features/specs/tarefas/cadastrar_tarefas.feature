@@ -37,7 +37,7 @@ Funcionalidade: Cadastro de tarefas
     @login @logout @dup
     Cenario: Tarefa não pode ser duplicada
 
-        Dado que o nome da minha tarefa é "Ler um livro MongoDB"
+        Dado que o nome da minha tarefa é "Ler o blog do Diego"
         E a data de finalização será "22/12/2018"
         Mas eu já cadastrei esta tarefa e esqueci
         Quando faço o cadastro desta tarefa
