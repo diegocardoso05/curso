@@ -1,9 +1,7 @@
-#language:pt
-
-Funcionalidade: Login
+Funcionalidade: EnvioSMS
     Para que eu possa simular o envio de mensagens
     Sendo o Administrador 
-    Posso  acessar o sistema com usuário e senha.
+    Posso interagir com as mensagens.
 
     Contexto: Home
       Dado que eu acesso o sistema
@@ -24,6 +22,3 @@ Funcionalidade: Login
       Exemplos:
       | Header 1 | Header 2 | Header 3 |
       | Value 1  | Value 2  | Value 3  |
-
-
-
