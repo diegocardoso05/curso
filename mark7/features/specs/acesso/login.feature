@@ -13,11 +13,7 @@ Funcionalidade: Login
     Cenario: Usuário autenticado
       
       Quando faço login com "diegocardoso05@gmail.com" e "123456"
-<<<<<<< HEAD
       Então vejo a mensagem de boas vindas "Hello, Diego Cardoso"
-=======
-      Então vejo a mensagem de boas vindas "Olá, Diego"
->>>>>>> 0e16f13645c0a60d2e44f4251ef09b6c45495f5c
 
     @tentativa_login
     Esquema do Cenario: Tentativa de login

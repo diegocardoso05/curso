@@ -49,7 +49,7 @@ class TarefasPage
       click_button 'Não, deixa queto.'
     end
   end
-
+  #clique no botão voltar se o if(se estiver na pagina de de adicionar tarefas) for verdadeiro
   def voltar
     click_on 'Voltar' if page.has_css?('#add-task')
   end
