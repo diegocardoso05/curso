@@ -51,7 +51,7 @@ class TarefasPage
   end
 
   def voltar
-    click_on 'Voltar'
+    click_on 'Voltar' if page.has_css?('#add-task')
   end
 
   # def modal

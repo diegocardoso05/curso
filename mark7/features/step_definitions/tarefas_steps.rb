@@ -35,7 +35,7 @@ Então('devo ver somente {int} tarefa com o nome cadastrado') do |quantidade|
     res = DAO.new.buscar_terefa(@nome_tarefa, @usuario[:email])
     expect(res.count).to eql quantidade
     
-    #@tarefas_page.voltar
+    @tarefas_page.voltar
     @tarefas_page.busca(@nome_tarefa)
     expect(@tarefas_page.busca_trs.size).to eql quantidade
 end
