@@ -27,5 +27,10 @@ class DAO
     task = @client[:tasks]
     task.delete_many('title' => nome, 'createdBy' => user[:_id])
   end
+
+  def remover_usuarios(email)
+    users = @client[:users]
+    users.delete_many('address' => email)
+end
   
 end

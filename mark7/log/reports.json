@@ -1,0 +1,326 @@
+[
+  {
+    "uri": "features/specs/acesso/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "    Para que eu possa cadastrar e gerenciar minhas tarefas\n    Sendo um usuário \n    Posso  acessar o sistema com meu email e senha \n    previamente cadastrados.",
+    "line": 3,
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "Home",
+        "description": "",
+        "line": 9,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70751
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84253
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3594509174
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acesso o sistema",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4281296700
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;usuário-autenticado",
+        "keyword": "Cenario",
+        "name": "Usuário autenticado",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@sprint1",
+            "line": 12
+          },
+          {
+            "name": "@logout",
+            "line": 12
+          },
+          {
+            "name": "@smoke",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço login com \"diegocardoso05@gmail.com\" e \"123456\"",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 698257849
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "vejo a mensagem de boas vindas \"Hello, Diego Cardoso\"",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 626593993
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 398223445
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186989249
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specs/tarefas/cadastrar_tarefas.feature",
+    "id": "cadastro-de-tarefas",
+    "keyword": "Funcionalidade",
+    "name": "Cadastro de tarefas",
+    "description": "    Para que eu possa organizar minha vida\n    Sendo uma usuário cadastrado\n    Posso adicionar novas tarefas no meu Painel",
+    "line": 3,
+    "elements": [
+      {
+        "id": "cadastro-de-tarefas;nova-tarefa",
+        "keyword": "Cenario",
+        "name": "Nova tarefa",
+        "description": "",
+        "line": 9,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 8
+          },
+          {
+            "name": "@login",
+            "line": 8
+          },
+          {
+            "name": "@logout",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37805
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48067
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 260665460
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1206807661
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que o nome da minha tarefa é \"Fazer Compras\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2571032766
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a data de finalização será \"20/12/2018\"",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61570
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "quero taguear esta tarefa com:",
+            "line": 13,
+            "rows": [
+              {
+                "cells": [
+                  "tag"
+                ]
+              },
+              {
+                "cells": [
+                  "Compras"
+                ]
+              },
+              {
+                "cells": [
+                  "SuperMercado"
+                ]
+              },
+              {
+                "cells": [
+                  "Ketchup"
+                ]
+              },
+              {
+                "cells": [
+                  "Mostarda"
+                ]
+              },
+              {
+                "cells": [
+                  "Maionese"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173367
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço o cadastro desta tarefa",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1205135559
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver esta tarefa com o status \"Em andamento\"",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 506471026
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "devo ver somente 1 tarefa com o nome cadastrado",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4771042920
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 319247381
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 178042743
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

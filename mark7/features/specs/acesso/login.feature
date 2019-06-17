@@ -13,7 +13,7 @@ Funcionalidade: Login
     Cenario: Usuário autenticado
       
       Quando faço login com "diegocardoso05@gmail.com" e "123456"
-      Então vejo a mensagem de boas vindas "Hello, Diego Cardoso"
+      Então vejo a mensagem de boas vindas "Hello, Diego"
 
     @tentativa_login
     Esquema do Cenario: Tentativa de login
@@ -22,9 +22,9 @@ Funcionalidade: Login
       Então vejo a mensagem de alerta "<saida>"
 
     Exemplos:
-      | email                      | senha   | saida                       |
-      | diegocardoso05@gmail.com   | xpto123 | Senha inválida              |
-      | diegocardoso05@gmail.i     | xpto123 | Email incorreto ou ausente. |
-      |                            | 123456  | Email incorreto ou ausente. |
-      | diegocardoso05@gmail.com   |         | Senha ausente               |
+      | email                      | senha   | saida                |
+      | diegocardoso05@gmail.com   | xpto123 | Incorrect password   |
+      | diegocardoso05@gmail.i     | xpto123 | Email is required    |
+      |                            | 123456  | Email is required    |
+      | diegocardoso05@gmail.com   |         | Password is required |
 

@@ -5,7 +5,7 @@ Funcionalidade: Cadastro de tarefas
     Sendo uma usuário cadastrado
     Posso adicionar novas tarefas no meu Painel
 
-    @smoke @login @logout 
+    @login @logout 
     Cenario: Nova tarefa
 
         Dado que o nome da minha tarefa é "Fazer Compras"
